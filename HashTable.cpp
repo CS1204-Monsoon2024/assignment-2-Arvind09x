@@ -77,7 +77,7 @@ class HashTable
     public:
         void insert(int value)
         {
-            if(t_vals/(double)m > load_factor)
+            if(t_vals/(double)m >= load_factor)
             {
                 resize();
             }
