@@ -3,9 +3,9 @@ using namespace std;
 class HashTable
 {
     int *table;//hashtable underlaying data structure
-    int m;
+    int m;//capacity of the hashtable
     int t_vals;//total number of values inserted into the table
-    double load_factor;
+    double load_factor;//alpha
     public: HashTable(int cap)
         {
             load_factor = 0.8;
@@ -54,7 +54,7 @@ class HashTable
                 {
                     // Rehash the existing values into the new table
                     int index = table[i] % new_m;
-                    int j = 1; // Quadratic probing variable
+                    int j = 1; 
                     while (new_table[index] != -1) 
                     {
                         index = (index + j * j) % new_m; // Quadratic probing
@@ -100,7 +100,7 @@ class HashTable
                 while(table[ind]!=-1 && visited<m)
                 {
                     visited++; 
-                    ind = (index + i*i)%m;
+                    ind = (index + i*i)%m;//quadratic probing
                     i++;
                 }
                 if(visited==m)
