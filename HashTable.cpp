@@ -171,7 +171,7 @@ class HashTable
             for(int i = 0;i<m;i++)
             {
                 if(table[i] == -1)
-                cout << " - ";
+                cout << "-";
                 else
                 cout << table[i] << " ";
             }
