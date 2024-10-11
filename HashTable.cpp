@@ -44,11 +44,9 @@ class HashTable
                 new_m = new_m+2;
             }
             int *new_table = new int[new_m];
-            for(int i = 0;i<m;i++)
+            for(int i = 0;i<new_m;i++)
             {
-
                 new_table[i] = -1;
-
             }
             for (int i = 0; i < m; i++) 
             {
@@ -79,7 +77,7 @@ class HashTable
     public:
         void insert(int value)
         {
-            if(((double)(t_vals/m)) > load_factor)
+            if(t_vals/(double)m > load_factor)
             {
                 resize();
             }
