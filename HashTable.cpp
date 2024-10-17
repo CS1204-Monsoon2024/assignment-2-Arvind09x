@@ -97,7 +97,7 @@ class HashTable
             }
             else
             {
-                while(table[ind]!=-1 && visited<m)
+                while(table[ind]!=-1 && visited<(m+1)/2)
                 {
                     visited++; 
                     ind = (index + i*i)%m;//quadratic probing
@@ -127,7 +127,7 @@ class HashTable
             int ind = index;
             int visited = 0;//number of indices visited
             int i = 1;
-            while(visited<m)
+            while(visited<(m+1)/2)
             {
                 visited++;
                 if(table[ind] == value)
@@ -152,7 +152,7 @@ class HashTable
             int ind = index;
             int visited = 0;//number of indices visited
             int i = 1;
-            while(visited<m)
+            while(visited<(m+1)/2)
             {
                 visited++;
                 if(table[ind] == value)
